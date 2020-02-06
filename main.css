@@ -1,0 +1,44 @@
+:root {
+  --container-radius: 3px;
+}
+
+#calc-container {
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  width: 200px;
+  margin: 50px auto;
+  border-radius: var(--container-radius);
+}
+
+.buttons-container,
+.display-container {
+  margin: 2px;
+  border-width: 1px;
+  border-color: gray;
+  border-style: solid;
+}
+
+.display-container {
+  padding: 6px 32px;
+  text-align: right;
+  border-radius: var(--container-radius) var(--container-radius) 0 0;
+}
+
+.buttons-container {
+  text-align: center;
+  padding: 10px 0px;
+  border-radius: 0 0 var(--container-radius) var(--container-radius);
+}
+
+.calc-button {
+  margin: 3px;
+}
+
+.btn-single-wide {
+  width: 30px;
+}
+
+.btn-double-wide {
+  width: 70px;
+}
