@@ -20,36 +20,3 @@ module.exports = class HtmlInt {
     })
   }
 }
-
-const keyMapping = e => {
-  const keyCode = e.which || e.keyCode
-
-  switch (keyCode) {
-    case 49:
-      break
-    case 49:
-      break
-    case 49:
-      break
-    case 49:
-      break
-    case 49:
-      break
-    case 49:
-      break
-    case 49:
-      break
-    case 49:
-      break
-    case 49:
-      break
-    case 49:
-      break
-    case 49:
-      break
-    default:
-      break
-  }
-}
-
-document.addEventListener('keydown', keyMapping, false)

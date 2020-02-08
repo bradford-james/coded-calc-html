@@ -1,4 +1,4 @@
-const Calculator = require('./calculator/calc')
+const Calculator = require('coded-calc-core-js')
 const HtmlInt = require('./interface/interface')
 
 const calculatorInst = new Calculator()

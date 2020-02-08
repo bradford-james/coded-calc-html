@@ -4,6 +4,10 @@ module.exports = {
     browser: true,
     jest: true,
   },
+  plugins: ['prettier'],
+  rules: {
+    'prettier/prettier': 'error',
+  },
   rules: {
     'no-console': 0,
     'no-underscore-dangle': 0,

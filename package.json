@@ -1,23 +1,61 @@
 {
   "name": "coded-calc-html",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.0-development",
   "main": "index.js",
+  "keywords": [],
+  "author": "Bradford James <bradwettig@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "dev": "parcel index.html",
     "test": "jest",
     "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\"",
-    "lint": "eslint ."
+    "format": "npm run prettier -- --write",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "commit": "npm run format && npm run lint && git add . && git cz",
+    "release": "git push --follow-tags"
   },
-  "keywords": [],
-  "author": "Bradford James <bradwettig@gmail.com>",
-  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "prepare-commit-msg": "",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "post-commit": "",
+      "pre-push": ""
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/prompt": "^8.3.5",
+    "@semantic-release/changelog": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/github": "^7.0.3",
+    "cz-conventional-changelog": "^3.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1"
-  }
+    "husky": "^4.2.1",
+    "prettier": "^1.19.1",
+    "semantic-release": "^17.0.2"
+  },
+  "dependencies": {
+    "coded-calc-core-js": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bradford-james/coded-calc-html.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bradford-james/coded-calc-html/issues"
+  },
+  "homepage": "https://github.com/bradford-james/coded-calc-html#readme",
+  "description": ""
 }
